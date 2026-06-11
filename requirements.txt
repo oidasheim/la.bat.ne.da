@@ -1,0 +1,104 @@
+# WE.ED.IT - Development Requirements
+
+## Core Dependencies
+- **Python**: 3.9+
+- **FFmpeg**: 4.0+ (for video processing)
+- **FFmpeg-python**: For Python bindings
+
+## Audio & Music Analysis
+```
+mutagen>=1.45.1          # MP3 tag extraction
+librosa>=0.9.0           # Audio analysis (BPM, structure)
+numpy>=1.21.0            # Numerical computations
+scipy>=1.7.0             # Signal processing
+```
+
+## Video Processing & Analysis
+```
+opencv-python>=4.5.0     # Computer vision (shot detection, motion)
+pillow>=8.0.0            # Image processing
+moviepy>=1.0.0           # Video editing/composition
+```
+
+## Deep Learning & AI
+```
+torch>=1.9.0             # PyTorch (for GPU acceleration)
+torchvision>=0.10.0      # Vision models
+transformers>=4.0.0      # NLP/semantic understanding (optional)
+```
+
+## System & Performance
+```
+psutil>=5.8.0            # System hardware info
+tqdm>=4.60.0             # Progress bars
+```
+
+## Data & Utilities
+```
+pydantic>=1.8.0          # Data validation
+pyyaml>=5.4.0            # YAML config support
+click>=8.0.0             # CLI helper (optional, using argparse)
+```
+
+## Development Tools (Optional)
+```
+pytest>=6.2.0            # Testing
+black>=21.0              # Code formatting
+flake8>=3.9.0            # Linting
+mypy>=0.900              # Type checking
+```
+
+## Installation
+
+### Quick Install (Basic)
+```bash
+pip install mutagen librosa numpy scipy opencv-python pillow psutil
+```
+
+### Full Install (Recommended)
+```bash
+pip install -r requirements.txt
+```
+
+### GPU Support (CUDA)
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+### GPU Support (Apple Silicon)
+```bash
+pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+```
+
+## System Requirements
+
+### Minimum
+- 4GB RAM
+- 2-core CPU
+- 10GB free storage
+
+### Recommended
+- 16GB+ RAM
+- 8+ core CPU
+- NVIDIA/AMD GPU with 4GB+ VRAM
+- 50GB free storage
+
+### Optimal
+- 32GB+ RAM
+- 16+ core CPU
+- NVIDIA RTX 3060+ or equivalent
+- 200GB+ free storage
+
+## Optional Hardware Acceleration
+
+### CUDA (NVIDIA GPUs)
+- CUDA Toolkit 11.8+
+- cuDNN 8.0+
+
+### Metal (Apple Silicon)
+- macOS 12.0+
+- Automatic support via PyTorch
+
+### OpenCL (AMD/Intel GPUs)
+- OpenCL SDK installed
+- PyTorch OpenCL backend
